@@ -1,0 +1,563 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4e242;  /* Soft yellow background */
+    color: #333;
+}
+
+/* Header */
+.header {
+    background-color: rgba(188, 174, 24, 0.84);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header-images img {
+    width: 100%; /* Makes the image stretch across the entire width */
+    height: 350px; /* Maintains the aspect ratio */
+    object-fit: cover; /* Makes sure the image covers the area properly */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    color: #0c28dd;
+    font-family: 'Playfair Display', serif;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #0c28dd;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    background-color: red;
+    color: red;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero-content {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero-content .btn {
+    padding: 10px 20px;
+    background-color: #2ecc71;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.hero-content .btn:hover {
+    background-color: #27ae60;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+}
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+    background-color: #5cb8e1;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 30px;
+    color: #2c3e50;
+}
+
+.about-images img {
+    width: 30%;
+    margin: 10px;
+}
+
+/* Menu Section */
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.menu-left,
+.menu-right {
+    width: 48%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+    .menu-left,
+    .menu-right {
+        width: 100%; /* Stack sections vertically on smaller screens */
+    }
+
+    .menu-container {
+        flex-direction: column;
+    }
+}
+
+/* Reservation Section */
+.reservation {
+    background-color: rgba(44, 117, 226, 0.16);
+    padding: 50px 20px;
+}
+
+.reservation-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #2cd3e2;
+}
+
+.reservation-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: blue;
+    color: rgba(188, 174, 0, 0.84);
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reservation-form button:hover {
+    background-color: blue;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 20px;
+    background-color: #2cd3e2;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.google-map iframe {
+    width: 100%;
+    border: 0;
+}
+
+/* Footer */
+footer {
+    background-color: white;
+    color: black;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Image Gallery */
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.image-item {
+    text-align: center;
+}
+
+.image-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.image-item p {
+    margin-top: 10px;
+}
+
+.no-dots {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Hero Section */
+#hero {
+    background-color: #a57f11;
+    padding: 50px 20px;
+}
+
+#hero h1 {
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 0;
+     color: white;
+}
+
+/* Food Slideshow */
+.food-slideshow {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #09530f;
+}
+
+.food-slideshow img {
+    position: absolute;
+    opacity: 0;
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    transition: opacity 1.5s ease-in-out, transform 0.5s ease-in-out;
+    transform: scale(1);
+}
+
+.food-slideshow img.active {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Customer Comments */
+.customer-comments {
+    background-color: rgba(228, 219, 118, 0.84);
+    padding: 20px;
+    margin-top: 20px;
+    border-top: 2px solid #ccc;
+}
+
+.customer-comments .section-title h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto 20px;
+}
+
+.comment-form input,
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #60e22c;
+    border-radius: 5px;
+}
+
+.comment-form button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #aee22c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment-form button:hover {
+    background-color: #0056b3;
+}
+
+.comment-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.comment-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.comment-list li {
+    background-color: rgba(144, 44, 226, 0.42);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #2ce23b;
+    border-radius: 5px;
+}
+
+.comment-list li h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #007bff;
+}
+
+/* Success and Error Styles */
+.success {
+    color: green;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+/* Occupation Section */
+.Occupation {
+    background-color: rgba(188, 174, 24, 0.84);
+    padding: 20px;
+    margin-left: 100px;
+    text-align: justify;
+    color: #0c28dd;
+}
+
+/* Customer Comments Styling */
+.customer-comments {
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 500px;
+    width: 90%;
+}
+
+.customer-comments h1 {
+    margin-bottom: 10px;
+}
+
+.customer-comments form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.customer-comments input,
+.customer-comments textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.customer-comments button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.customer-comments button:hover {
+    background-color: #0056b3;
+}
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4e242;  /* Soft yellow background */
+    color: #333;
+}
+
+/* Header */
+.header {
+    background-color: rgba(188, 174, 24, 0.84);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header-images img {
+    width: 100%; /* Makes the image stretch across the entire width */
+    height: 350px; /* Maintains the aspect ratio */
+    object-fit: cover; /* Makes sure the image covers the area properly */
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Customer Comments Section */
+.customer-comments {
+    width: 100%; /* Full width to cover the entire background */
+    background-color: rgba(228, 219, 118, 0.84);
+    padding: 20px 0;
+    margin-top: 20px;
+    border-top: 2px solid #ccc;
+    text-align: center;
+}
+
+.customer-comments .section-title h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto 20px;
+}
+
+.comment-form input,
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #60e22c;
+    border-radius: 5px;
+}
+
+.comment-form button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #aee22c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment-form button:hover {
+    background-color: #0056b3;
+}
+
+.comment-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.comment-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.comment-list li {
+    background-color: rgba(144, 44, 226, 0.42);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #2ce23b;
+    border-radius: 5px;
+}
+
+.comment-list li h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #007bff;
+}
+
+.comment-replies {
+    margin-top: 10px;
+    padding-left: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.comment-replies .reply-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.comment-replies .reply-form input,
+.comment-replies .reply-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.comment-replies .reply-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment-replies .reply-form button:hover {
+    background-color: #0056b3;
+}
